@@ -1,0 +1,19 @@
+<!--about me card-->
+<div class="h-card card t white-text z-depth-5" >
+
+    <div class="card-image">
+    <img src="images/user.jpg">
+    <span class="card-title "><?= $this->e($name) ?></span>
+    </div>
+			
+    <div class="card-content">
+    <p><?= $this->e($description); ?></br></br>
+	<a class="white-text" href="https://twitter.com/physcocode" rel="me"><i class="fa fa-ttwitter"></i> twitter.com/physcocode</a></br>
+	<a class="white-text" href="https://facebook.com/iamdroid" rel="me"><i class="fa fa-ffacebook"></i> facebook.com/iamdroid</a></br>
+	<a class="white-text" href="https://github.com/physcocode" rel="me"><i class="fa fa-github"></i> github.com/physcocode</a></br>
+	<a class="white-text" href="https://google.com/+pranjalpandeyp" rel="me"><i class="fa fa-ggoogle-plus"></i> google.com/+pranjalpandeyp</a></br>
+	<a class="white-text" href="https://in.linkedin.com/in/physcocode" rel="me"><i class="fa fa fa-llinkedin"></i> linkedin.com/physcocode</a></br></p>	
+    </div>  
+			
+</div>
+<!--End of about me card-->

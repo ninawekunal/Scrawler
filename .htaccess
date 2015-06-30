@@ -1,0 +1,35 @@
+#Lifeline configuration
+
+<IfModule !mod_rewrite.c>
+    # Lazy Hack to detect mod_rewrite problem
+    ErrorDocument 500 "Lifeline error: Apache does not have mod_rewrite loaded. Please check your Apache setup."
+    RedirectMatch 302 .* index.php
+</IfModule>
+
+<IfModule mod_rewrite.c>
+# All request are redirected from index.php
+# Necessary for our Route to work 
+ RewriteEngine on
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*) index.php?url=$1 [L]
+</IfModule>
+
+#prevent directory from showing up
+Options -Indexes
+
+# Follow symbolic links
+Options +FollowSymLinks
+
+# php 4, apache 1.x
+<IfModule mod_php4.c>
+    ErrorDocument 500 "Lifeline error: Lifeline does not support PHP 4."
+    RedirectMatch 302 .* index.php
+</IfModule>
+
+# php 4, apache 2
+<IfModule sapi_apache2.c>
+    ErrorDocument 500 "Lifeline error: Lifeline does not support PHP 4."
+    RedirectMatch 302 .* index.php
+</IfModule>

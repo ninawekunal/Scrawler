@@ -1,0 +1,13 @@
+
+<!--blog-->
+<?php foreach ($posts as $post) { ?>
+
+		<div class="card t white-text">
+		<div class="card-content white-text">
+		<span class="card-title"><?= $this->e($post['title'])?></span>
+		<p> <?= $post['body'];?></p>
+		</div>
+		</div>
+		
+<?php } ?>
+<!--end of blog-->		

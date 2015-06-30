@@ -1,0 +1,24 @@
+<?php $this->layout('shell',['title' => 'Home']) ?>  
+
+<!--homepage-->  
+<div class="row">
+	
+        <div class="col s12 m4 l3">
+		<?=$this->insert('home/profile',['name' => $name, 'description' => $description ])?>  
+        </div>    
+            
+	    <div class="col  l1">
+		&nbsp
+		</div>	
+	
+	    <div class="col s12 m6 l7">
+	    <?=$this->insert('home/main',['posts' => $posts])?>
+		</div>
+	  	   
+	    <div class="col m1 l1">
+		&nbsp
+		</div>
+		
+</div>
+<!--end of homepage-->		
+     

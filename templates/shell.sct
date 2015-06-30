@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	 <link href= "css/scrawler.css"" rel="stylesheet">
+	 <link href= "font-awesome/css/font-awesome.min.css"" rel="stylesheet">
+
+</head>
+  
+<body>
+
+     <!--navigation bar-->
+	 <nav class="t">
+     <div class="nav-wrapper">
+     <a href="#" class="brand-logo"> &nbsp <?= $this->e($site); ?></a>    
+     </div>
+     </nav></br>
+	 <!--navigation bar end-->
+	  
+	 <!--body starts here-->
+	 <?=$this->section('content');?>
+     <!--body ends here->	 
+	 
+
+     <!-- Including all the JS -->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/materialize.min.js"></script>
+	
+</body>
+
+
+</html>
