@@ -41,7 +41,7 @@ class Database
 	function get_articles()
 	{
 	   $stmt = $this->db->query("SELECT * FROM articles ORDER BY published DESC");        
-	   $data = [];
+	   $data = array();
        while ($row = $stmt->fetch_assoc()) 
 	   {
        $data[] = $row;

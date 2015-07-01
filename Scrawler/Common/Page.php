@@ -14,7 +14,7 @@
 	 {
 		$this->t = \Scrawler\Core\site()->template();
         $site = \Scrawler\Core\site()->config()->site;		
-		$this->t->addData(['site' => $site]);
+		$this->t->addData(array('site' => $site));
 		\Scrawler\Core\site()->session()->start_session('_s', false);
 	 }
  }

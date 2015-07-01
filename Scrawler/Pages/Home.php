@@ -15,9 +15,9 @@ class Home extends \Scrawler\Common\Page
 	    function get() 
 		{
 			
-			 echo $this->t->render('home', ['posts'       => \Scrawler\Core\site()->post()->view(),
+			 echo $this->t->render('home', array('posts'       => \Scrawler\Core\site()->post()->view(),
 			                                'name'        => \Scrawler\Core\site()->config()->name,
-										    'description' => \Scrawler\Core\site()->config()->description,]);
+										    'description' => \Scrawler\Core\site()->config()->description,));
 			
         }
 		
